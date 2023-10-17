@@ -1,3 +1,22 @@
+# How to
+
+1. compile App1 and App2
+
+```
+npx ng build app1
+npx ng build app2
+```
+
+2. run server
+
+```
+npx ng serve
+```
+
+# Documentation
+
+https://medium.com/disney-streaming/combining-multiple-angular-applications-into-a-single-one-e87d530d6527
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
