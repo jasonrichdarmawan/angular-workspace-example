@@ -2,6 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@@app1": [
+        "dist/app1-lib",
+      ],
+      "@@app2": [
+        "dist/app2-lib",
+      ],
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
