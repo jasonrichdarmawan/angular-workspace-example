@@ -3,6 +3,10 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@@environments": [
+        "dist/environments/environments",
+        "dist/environments"
+      ],
       "@@app1": [
         "dist/app1-lib",
       ],

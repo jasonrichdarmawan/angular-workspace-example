@@ -1,3 +1,4 @@
+import { environment } from '@@environments';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class View1Component implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log("hello world", environment);
+  }
 
   ngOnInit(): void {
   }

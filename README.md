@@ -1,10 +1,11 @@
-# How to
+# How to run the project
 
 1. compile App1 and App2
 
 ```
-npx ng build app1
-npx ng build app2
+npx ng build environments
+npx ng build app1-lib
+npx ng build app2-lib
 ```
 
 2. run server
@@ -12,6 +13,15 @@ npx ng build app2
 ```
 npx ng serve
 ```
+
+# How to run specific application
+
+```
+npx ng serve <application-name>
+```
+
+i.e. <application-name>:
+1. app1
 
 # Documentation
 
