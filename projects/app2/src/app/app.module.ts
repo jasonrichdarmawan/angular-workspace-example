@@ -3,20 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { View1Component } from './view1/view1.component';
-import { View2Component } from './view2/view2.component';
-import { NavComponent } from './nav/nav.component';
+import { View1SharedModule } from './view1/view1.module';
+import { View2SharedModule } from './view2/view2.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    View1Component,
-    View2Component,
-    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    View1SharedModule.forRoot(),
+    View2SharedModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
