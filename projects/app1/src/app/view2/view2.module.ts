@@ -20,13 +20,3 @@ const providers: Provider[] = [
   providers: providers,
 })
 export class View2Module { }
-
-@NgModule({})
-export class View2SharedModule{
-  static forRoot(): ModuleWithProviders<View2Module> {
-    return {
-      ngModule: View2Module,
-      providers: providers,
-    }
-  }
-}

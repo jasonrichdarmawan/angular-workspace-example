@@ -2,6 +2,8 @@
 
 - [ ] lazy loaded library.
 
+    current solution is to import to the `projects` folder instead of to the `dist` folder.
+
 - [ ] `fileReplacements` in angular.json of a library.
 
     ```

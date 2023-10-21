@@ -18,13 +18,3 @@ import { NavComponent } from './nav.component';
   ],
 })
 export class NavModule { }
-
-@NgModule({})
-export class NavSharedModule{
-  static forRoot(): ModuleWithProviders<NavModule> {
-    return {
-      ngModule: NavModule,
-      providers: []
-    }
-  }
-}
