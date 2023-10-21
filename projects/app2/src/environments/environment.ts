@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  project: "environments"
+  project: "app2",
 };
 
 /*

@@ -1,9 +1,11 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { NavRoutingModule } from './nav-routing.module';
 import { NavComponent } from './nav.component';
 
+const providers: Provider[] = [
+];
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { NavComponent } from './nav.component';
   ],
   exports: [
     NavComponent,
-  ]
+  ],
+  providers: providers,
 })
 export class NavModule { }
 
@@ -24,7 +27,7 @@ export class NavSharedModule {
   static forRoot(): ModuleWithProviders<NavModule> {
     return {
       ngModule: NavModule,
-      providers: [],
+      providers: providers,
     }
   }
 }

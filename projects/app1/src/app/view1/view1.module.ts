@@ -1,20 +1,29 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { View1RoutingModule } from './view1-routing.module';
 import { View1Component } from './view1.component';
-import { NavSharedModule } from '../nav/nav.module';
+import { NavModule } from '../nav/nav.module';
+import { GetUsersPipe } from '../domain/usecases/get-users-pipe/get-users.pipe';
+import { GetUsersService } from '../domain/usecases/get-users-service/get-users.service';
 
+const providers: Provider[] = [
+  GetUsersService,
+];
 
 @NgModule({
   declarations: [
     View1Component,
+
+    // TODO: angular 14 standalone component
+    GetUsersPipe,
   ],
   imports: [
     CommonModule,
     View1RoutingModule,
-    NavSharedModule.forRoot(),
+    NavModule,
   ],
+  providers: providers
 })
 export class View1Module { }
 
@@ -23,7 +32,7 @@ export class View1SharedModule {
   static forRoot(): ModuleWithProviders<View1Module> {
     return {
       ngModule: View1Module,
-      providers: [],
+      providers: providers,
     }
   }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from '@@environments';
+import { environment as localEnvironment } from '../../environments/environment';
+import { environment as libraryEnvironment } from '@@environments';
+
 
 @Component({
   selector: 'app-view1',
@@ -8,8 +10,9 @@ import { environment } from '@@environments';
 })
 export class View1Component implements OnInit {
 
-  constructor() {
-    console.log("hello world", environment);
+  constructor(
+  ) {
+    console.log("app2", View1Component.name, localEnvironment, libraryEnvironment);
   }
 
   ngOnInit(): void {

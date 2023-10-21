@@ -1,14 +1,30 @@
+# To Do
+
+- [ ] lazy loaded library.
+
+- [ ] `fileReplacements` in angular.json of a library.
+
+    ```
+    npx ng build environments --configuration=development
+    ```
+
+    or
+
+    ```
+    npx ng build environments --configuration=production
+    ```
+
 # How to run the project
 
-1. compile App1 and App2
+1. compile the App1 and the App2 as a **library**
 
 ```
-npx ng build environments
-npx ng build app1-lib
-npx ng build app2-lib
+npx ng build environments --configuration=development
+npx ng build app1-lib --configuration=development
+npx ng build app2-lib --configuration=development
 ```
 
-2. run server
+2. run the server
 
 ```
 npx ng serve
@@ -20,8 +36,10 @@ npx ng serve
 npx ng serve <application-name>
 ```
 
-i.e. <application-name>:
-1. app1
+i.e.
+```
+npx ng serve app1
+```
 
 # Documentation
 

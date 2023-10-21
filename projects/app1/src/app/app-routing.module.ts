@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { View1SharedModule } from './view1/view1.module';
+import { View2SharedModule } from './view2/view2.module';
 
 const routes: Routes = [
   { path: 'app1/one', loadChildren: () => import("./view1/view1.module").then(m => m.View1Module) },
@@ -8,7 +10,11 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    View1SharedModule.forRoot(),
+    View2SharedModule.forRoot(),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

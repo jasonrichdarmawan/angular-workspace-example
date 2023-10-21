@@ -4,7 +4,6 @@
   "compilerOptions": {
     "paths": {
       "@@environments": [
-        "dist/environments/environments",
         "dist/environments"
       ],
       "@@app1": [

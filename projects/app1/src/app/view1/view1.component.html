@@ -1,2 +1,10 @@
 <app-nav></app-nav>
 <p>app1 view1 works!</p>
+
+<br>
+<p>getUsers pipe</p>
+<p *ngFor="let user of undefined | getUsers">{{user}}</p>
+
+<br>
+<p>getUsers service</p>
+<p *ngFor="let user of this.users">{{user}}</p>

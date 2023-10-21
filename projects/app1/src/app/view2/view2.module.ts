@@ -1,10 +1,12 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { View2RoutingModule } from './view2-routing.module';
 import { View2Component } from './view2.component';
-import { NavSharedModule } from '../nav/nav.module';
+import { NavModule } from '../nav/nav.module';
 
+const providers: Provider[] = [
+];
 
 @NgModule({
   declarations: [
@@ -13,8 +15,9 @@ import { NavSharedModule } from '../nav/nav.module';
   imports: [
     CommonModule,
     View2RoutingModule,
-    NavSharedModule.forRoot(),
-  ]
+    NavModule,
+  ],
+  providers: providers,
 })
 export class View2Module { }
 
@@ -23,7 +26,7 @@ export class View2SharedModule{
   static forRoot(): ModuleWithProviders<View2Module> {
     return {
       ngModule: View2Module,
-      providers: [],
+      providers: providers,
     }
   }
 }

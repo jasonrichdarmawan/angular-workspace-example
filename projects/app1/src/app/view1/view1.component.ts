@@ -1,5 +1,7 @@
-import { environment } from '@@environments';
 import { Component, OnInit } from '@angular/core';
+import { environment as localEnvironment } from '../../environments/environment';
+import { environment as libraryEnvironment } from '@@environments';
+import { GetUsersService } from '../domain/usecases/get-users-service/get-users.service';
 
 @Component({
   selector: 'app-view1',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view1.component.scss']
 })
 export class View1Component implements OnInit {
+  users: string[];
 
-  constructor() {
-    console.log("hello world", environment);
+  constructor(
+    public getUsers: GetUsersService
+  ) {
+    console.log("app1", View1Component.name, localEnvironment, libraryEnvironment);
+
+    this.users = getUsers.call();
   }
 
   ngOnInit(): void {
