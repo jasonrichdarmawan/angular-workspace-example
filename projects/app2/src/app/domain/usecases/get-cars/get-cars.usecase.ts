@@ -1,12 +1,12 @@
 import { isPlatformServer } from '@angular/common';
-import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { Inject, Injectable, InjectionToken, PLATFORM_ID } from '@angular/core';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { Observable, of, tap } from 'rxjs';
 import { GET_CARS_REPOSITORY, GetCarsRepository } from '../../repositories/get-cars.repository';
 
 export const CARS = makeStateKey<string[]>('cars');
 
-export const GET_CARS = "GetCars";
+export const GET_CARS = new InjectionToken<GetCars>("GetCars");
 
 export interface GetCars {
   call(): Observable<string[]>;

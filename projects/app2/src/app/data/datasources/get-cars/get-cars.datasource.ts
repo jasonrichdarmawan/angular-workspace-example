@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, InjectionToken } from '@angular/core';
 import { Observable } from 'rxjs';
 
-export const GET_CARS_DATA_SOURCE = "GetCarsDataSource";
+export const GET_CARS_DATA_SOURCE = new InjectionToken<GetCarsDataSource>("GetCarsDataSource");
 
 export interface GetCarsDataSource {
   fetchCars: () => Observable<string[]>;
