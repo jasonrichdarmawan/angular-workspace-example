@@ -60,6 +60,8 @@ npx ng serve app1
 
 https://medium.com/disney-streaming/combining-multiple-angular-applications-into-a-single-one-e87d530d6527
 
+https://levelup.gitconnected.com/a-beginners-guide-to-implementing-transferstate-in-angular-a313f3244f03
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, scan } from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class GetCarsService {

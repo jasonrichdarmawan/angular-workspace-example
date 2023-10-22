@@ -1,10 +1,11 @@
 import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, TransferState } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 const providers: Provider[] = [
+  TransferState,
 ];
 
 @NgModule({
