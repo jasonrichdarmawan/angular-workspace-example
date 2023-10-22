@@ -1,5 +1,5 @@
 import { Injectable, InjectionToken } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, delay, interval, map, take } from 'rxjs';
 
 export const GET_CARS_DATA_SOURCE = new InjectionToken<GetCarsDataSource>("GetCarsDataSource");
 
@@ -15,11 +15,12 @@ export class GetCarsDataSourceImpl implements GetCarsDataSource {
   fetchCars(): Observable<string[]> {
     console.log(GetCarsDataSourceImpl.name, this.fetchCars.name, "called");
 
-    return new Observable((subscribe) => {
-      setTimeout(() => {
-        subscribe.next(["Car 1", "Car 2", "Car 3"]);
-        subscribe.complete();
-      }, 3000);
-    })
+    const cars = ["Car 1", "Car 2", "Car 3"];
+
+    return interval(1000)
+      .pipe(
+        take(3),
+        map(index => cars.slice(0, index + 1))
+      );
   }
 }
