@@ -4,6 +4,8 @@
 
     current solution is to import to the `projects` folder instead of the `dist` folder.
 
+    NOTICE: Do not use the `app1-lib` or `app2-lib` projects, for now.
+
 - [ ] `fileReplacements` in angular.json of a library.
 
     ```
@@ -15,6 +17,8 @@
     ```
     npx ng build environments --configuration=production
     ```
+
+    NOTICE: Do not use the `environments`, `app1-lib`, `app2-lib` projects, for now.
 
 # How to run the project
 
