@@ -2,7 +2,7 @@
 
 - [ ] lazy loaded library.
 
-    current solution is to import to the `projects` folder instead of to the `dist` folder.
+    current solution is to import to the `projects` folder instead of the `dist` folder.
 
 - [ ] `fileReplacements` in angular.json of a library.
 
@@ -29,7 +29,7 @@ npx ng build app2-lib --configuration=development
 2. run the server
 
 ```
-npx ng serve
+npx ng serve --configuration=development
 ```
 
 # How to run specific application
