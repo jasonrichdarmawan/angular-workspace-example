@@ -1,5 +1,6 @@
 # To Do
 
+<s>
 - [ ] lazy loaded library.
 
     current solution is to import to the `projects` folder instead of the `dist` folder.
@@ -21,6 +22,7 @@
     ```
 
     NOTICE: Do not use the `environments`, `app1-lib`, `app2-lib` projects, for now.
+</s>
 
 # How to run the project
 

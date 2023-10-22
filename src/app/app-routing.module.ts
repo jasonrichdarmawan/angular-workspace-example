@@ -29,44 +29,15 @@
 /**
  * @version 2 always compile, less work.
 */
-// import { NgModule } from '@angular/core';
-// import { RouterModule, Routes } from '@angular/router';
-// import { routes as app1Routes } from 'projects/app1/src/app/app-routing.module';
-// import { routes as app2Routes } from 'projects/app2/src/app/app-routing.module';
-
-// const routes: Routes = [
-//   ...app1Routes,
-
-//   ...app2Routes,
-
-//   { path: 'app3', loadChildren: () => import("./app3/app3.module").then(m => m.App3Module) },
-
-//   { path: '**', redirectTo: '/app1/one' },
-// ];
-
-// @NgModule({
-//   imports: [
-//     RouterModule.forRoot(routes),
-//   ],
-//   exports: [RouterModule]
-// })
-// export class AppRoutingModule { }
-
-/**
- * @version 3 compile only when needed, more work.
- * @bug angular library do not have fileReplacements key in the angular.json file.
-*/
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { routes as app1Routes } from 'projects/app1/src/app/app-routing.module';
+import { routes as app2Routes } from 'projects/app2/src/app/app-routing.module';
 
 const routes: Routes = [
-  { path: 'app1/one', loadChildren: () => import("./app1/view1/view1.module").then(m => m.View1ModuleLibWrapper) },
-  { path: 'app1/two', loadChildren: () => import("./app1/view2/view2.module").then(m => m.View2ModuleLibWrapper) },
-  { path: 'app1', redirectTo: '/app1/one' },
+  ...app1Routes,
 
-  { path: 'app2/one', loadChildren: () => import("./app2/view1/view1.module").then(m => m.View1ModuleLibWrapper) },
-  { path: 'app2/two', loadChildren: () => import("./app2/view2/view2.module").then(m => m.View2ModuleLibWrapper) },
-  { path: 'app2', redirectTo: '/app2/one' },
+  ...app2Routes,
 
   { path: 'app3', loadChildren: () => import("./app3/app3.module").then(m => m.App3Module) },
 
@@ -80,6 +51,35 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+/**
+ * @version 3 compile only when needed, more work.
+ * @bug angular library do not have fileReplacements key in the angular.json file.
+*/
+// import { NgModule } from '@angular/core';
+// import { RouterModule, Routes } from '@angular/router';
+
+// const routes: Routes = [
+//   { path: 'app1/one', loadChildren: () => import("./app1/view1/view1.module").then(m => m.View1ModuleLibWrapper) },
+//   { path: 'app1/two', loadChildren: () => import("./app1/view2/view2.module").then(m => m.View2ModuleLibWrapper) },
+//   { path: 'app1', redirectTo: '/app1/one' },
+
+//   { path: 'app2/one', loadChildren: () => import("./app2/view1/view1.module").then(m => m.View1ModuleLibWrapper) },
+//   { path: 'app2/two', loadChildren: () => import("./app2/view2/view2.module").then(m => m.View2ModuleLibWrapper) },
+//   { path: 'app2', redirectTo: '/app2/one' },
+
+//   { path: 'app3', loadChildren: () => import("./app3/app3.module").then(m => m.App3Module) },
+
+//   { path: '**', redirectTo: '/app1/one' },
+// ];
+
+// @NgModule({
+//   imports: [
+//     RouterModule.forRoot(routes),
+//   ],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }
 
 /**
  * @version 4 always compile

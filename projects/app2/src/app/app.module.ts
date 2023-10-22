@@ -13,7 +13,7 @@ const providers: Provider[] = [
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
   ],
   providers: providers,

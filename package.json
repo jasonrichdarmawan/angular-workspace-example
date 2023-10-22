@@ -7,10 +7,16 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+
     "dev:ssr": "ng run my-app:serve-ssr",
     "serve:ssr": "node dist/my-app/server/main.js",
     "build:ssr": "ng build && ng run my-app:server",
-    "prerender": "ng run my-app:prerender"
+    "prerender": "ng run my-app:prerender --no-guess-routes --routes-file routes.txt",
+
+    "dev:ssr:app2": "ng run app2:serve-ssr",
+    "serve:ssr:app2": "node dist/app2/server/main.js",
+    "build:ssr:app2": "ng build app2 && ng run app2:server",
+    "prerender:app2": "ng run app2:prerender --no-guess-routes --routes-file projects/app2/routes.txt"
   },
   "private": true,
   "dependencies": {
