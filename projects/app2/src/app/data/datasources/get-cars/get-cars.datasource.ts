@@ -1,5 +1,5 @@
 import { Injectable, InjectionToken } from '@angular/core';
-import { Observable, delay, interval, map, take } from 'rxjs';
+import { Observable, interval, map, take } from 'rxjs';
 
 export const GET_CARS_DATA_SOURCE = new InjectionToken<GetCarsDataSource>("GetCarsDataSource");
 

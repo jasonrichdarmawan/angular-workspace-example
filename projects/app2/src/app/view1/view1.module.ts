@@ -1,13 +1,13 @@
-import { ModuleWithProviders, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { View1RoutingModule } from './view1-routing.module';
 import { View1Component } from './view1.component';
-import { NavModule } from 'projects/app2/src/app/nav/nav.module';
-import { GET_CARS, GetCarsImpl } from 'projects/app2/src/app/domain/usecases/get-cars/get-cars.usecase';
-import { GET_CARS_DATA_SOURCE, GetCarsDataSourceImpl } from 'projects/app2/src/app/data/datasources/get-cars/get-cars.datasource';
-import { GetCarsRepositoryImpl } from 'projects/app2/src/app/data/repositories/get-cars.repository.impl';
-import { GET_CARS_REPOSITORY } from 'projects/app2/src/app/domain/repositories/get-cars.repository';
+import { NavModule } from '../nav/nav.module';
+import { GET_CARS, GetCarsImpl } from '../domain/usecases/get-cars/get-cars.usecase';
+import { GET_CARS_DATA_SOURCE, GetCarsDataSourceImpl } from '../data/datasources/get-cars/get-cars.datasource';
+import { GetCarsRepositoryImpl } from '../data/repositories/get-cars.repository.impl';
+import { GET_CARS_REPOSITORY } from '../domain/repositories/get-cars.repository';
 
 
 @NgModule({

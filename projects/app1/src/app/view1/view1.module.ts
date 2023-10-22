@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { View1RoutingModule } from './view1-routing.module';
 import { View1Component } from './view1.component';
-import { NavModule } from 'projects/app1/src/app/nav/nav.module';
-import { GetUsersPipe } from 'projects/app1/src/app/domain/usecases/get-users-pipe/get-users.pipe';
-import { GetUsersService } from 'projects/app1/src/app/domain/usecases/get-users-service/get-users.service';
+import { NavModule } from '../nav/nav.module';
+import { GetUsersPipe } from '../domain/usecases/get-users-pipe/get-users.pipe';
+import { GetUsersService } from '../domain/usecases/get-users-service/get-users.service';
 
 const providers: Provider[] = [
   GetUsersService,
