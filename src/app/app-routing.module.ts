@@ -27,14 +27,18 @@
 // export class AppRoutingModule { }
 
 /**
- * @version 2 always compile
+ * @version 2 always compile, less work.
 */
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { App1SharedModule } from 'projects/app1/src/app/app.module';
-import { App2SharedModule } from 'projects/app2/src/app/app.module';
+import { routes as app1Routes } from 'projects/app1/src/app/app-routing.module';
+import { routes as app2Routes } from 'projects/app2/src/app/app-routing.module';
 
 const routes: Routes = [
+  ...app1Routes,
+
+  ...app2Routes,
+
   { path: 'app3', loadChildren: () => import("./app3/app3.module").then(m => m.App3Module) },
 
   { path: '**', redirectTo: '/app1/one' },
@@ -43,15 +47,38 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    App1SharedModule.forRoot(),
-    App2SharedModule.forRoot(),
   ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
 
 /**
- * @version 3 compile only when needed
+ * @version 3 always compile
+ * @bug do not work with Angular Universal
+*/
+// import { NgModule } from '@angular/core';
+// import { RouterModule, Routes } from '@angular/router';
+// import { App1SharedModule } from 'projects/app1/src/app/app.module';
+// import { App2SharedModule } from 'projects/app2/src/app/app.module';
+
+// const routes: Routes = [
+//   { path: 'app3', loadChildren: () => import("./app3/app3.module").then(m => m.App3Module) },
+
+//   { path: '**', redirectTo: '/app1/one' },
+// ];
+
+// @NgModule({
+//   imports: [
+//     RouterModule.forRoot(routes),
+//     App1SharedModule.forRoot(),
+//     App2SharedModule.forRoot(),
+//   ],
+//   exports: [RouterModule]
+// })
+// export class AppRoutingModule { }
+
+/**
+ * @version 4 compile only when needed
  * @bug when the browser go to /app1/one, App2 is downloaded as well.
  */
 // import { NgModule } from '@angular/core';
@@ -77,7 +104,7 @@ export class AppRoutingModule { }
 // export class AppRoutingModule { }
 
 /**
- * @version 4 compile only when needed, more work.
+ * @version 5 compile only when needed, more work.
  * @bug when the browser go to /app1/one, App1 View2Module is downloaded as well.
  */
 // import { NgModule } from '@angular/core';

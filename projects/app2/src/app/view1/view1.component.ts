@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { environment as localEnvironment } from '../../environments/environment';
-import { environment as libraryEnvironment } from '@@environments';
-import { GetCarsService } from '../domain/usecases/get-cars/get-cars.service';
+import { environment as localEnvironment } from 'projects/app2/src/environments/environment';
+import { environment as rootEnvironment } from 'src/environments/environment';
+import { GetCarsService } from 'projects/app2/src/app/domain/usecases/get-cars/get-cars.service';
 import { Observable } from 'rxjs';
 
 
@@ -16,7 +16,7 @@ export class View1Component implements OnInit {
   constructor(
     getCars: GetCarsService,
   ) {
-    console.log("app2", View1Component.name, localEnvironment, libraryEnvironment);
+    console.log("app2", View1Component.name, localEnvironment, rootEnvironment);
     this.cars = getCars.call();
   }
 

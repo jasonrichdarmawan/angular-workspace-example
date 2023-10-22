@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { View2RoutingModule } from './view2-routing.module';
 import { View2Component } from './view2.component';
-import { NavModule } from '../nav/nav.module';
+import { NavModule } from 'projects/app1/src/app/nav/nav.module';
 
 const providers: Provider[] = [
 ];

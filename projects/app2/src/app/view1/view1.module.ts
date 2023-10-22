@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { View1RoutingModule } from './view1-routing.module';
 import { View1Component } from './view1.component';
-import { NavModule } from '../nav/nav.module';
-import { GetCarsService } from '../domain/usecases/get-cars/get-cars.service';
+import { NavModule } from 'projects/app2/src/app/nav/nav.module';
+import { GetCarsService } from 'projects/app2/src/app/domain/usecases/get-cars/get-cars.service';
 
 
 @NgModule({

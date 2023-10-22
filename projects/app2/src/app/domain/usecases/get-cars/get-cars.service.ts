@@ -12,7 +12,7 @@ export class GetCarsService {
       setTimeout(() => {
         subscribe.next(["Car 1", "Car 2", "Car 3"]);
         subscribe.complete();
-      }, 1000);
+      }, 3000);
     })
   }
 }

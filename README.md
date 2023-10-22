@@ -22,19 +22,28 @@
 
 # How to run the project
 
+<s>
 1. compile the App1 and the App2 as a **library**
 
-```
-npx ng build environments --configuration=development
-npx ng build app1-lib --configuration=development
-npx ng build app2-lib --configuration=development
-```
+    ```
+    npx ng build environments --configuration=development
+    npx ng build app1-lib --configuration=development
+    npx ng build app2-lib --configuration=development
+    ```
+</s>
 
 2. run the server
 
-```
-npx ng serve --configuration=development
-```
+    development
+    ```
+    npm run dev:ssr
+    ```
+
+    production
+    ```
+    npm run build:ssr
+    npm run serve:ssr
+    ```
 
 # How to run specific application
 
