@@ -6,6 +6,8 @@
 
     NOTICE: Do not use the `app1-lib` or `app2-lib` projects, for now.
 
+    Reference: https://stackoverflow.com/questions/69257652/build-error-while-doing-lazy-loading-of-modules
+
 - [ ] `fileReplacements` in angular.json of a library.
 
     ```
