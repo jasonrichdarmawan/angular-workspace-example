@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { View1RoutingModule } from './view1-routing.module';
 import { View1Component } from './view1.component';
 import { NavModule } from '../nav/nav.module';
+import { GetCarsService } from '../domain/usecases/get-cars/get-cars.service';
 
 
 @NgModule({
@@ -14,6 +15,9 @@ import { NavModule } from '../nav/nav.module';
     CommonModule,
     View1RoutingModule,
     NavModule,
+  ],
+  providers: [
+    GetCarsService,
   ]
 })
 export class View1Module { }

@@ -1,2 +1,6 @@
 <app-nav></app-nav>
 <p>app2 view1 works!</p>
+
+<br>
+<p>getCars service</p>
+<p *ngFor="let car of this.cars | async">{{car}}</p>
