@@ -35,10 +35,6 @@ import { App1SharedModule } from 'projects/app1/src/app/app.module';
 import { App2SharedModule } from 'projects/app2/src/app/app.module';
 
 const routes: Routes = [
-  { path: 'app1', loadChildren: () => import("projects/app1/src/app/app.module").then(m => m.App1SharedModule) },
-
-  { path: 'app2', loadChildren: () => import("projects/app2/src/app/app.module").then(m => m.App2SharedModule) },
-
   { path: 'app3', loadChildren: () => import("./app3/app3.module").then(m => m.App3Module) },
 
   { path: '**', redirectTo: '/app1/one' },
