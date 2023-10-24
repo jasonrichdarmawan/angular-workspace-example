@@ -12,6 +12,9 @@
       "@@app2": [
         "dist/app2-lib",
       ],
+      "@@myAppUI": [
+        "dist/my-app-ui"
+      ],
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

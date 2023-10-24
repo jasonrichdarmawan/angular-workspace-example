@@ -1,7 +1,9 @@
 # To Do
 
+- [ ] lazy loaded NgModules from angular library
+
 <s>
-- [ ] lazy loaded library.
+- [ ] lazy loaded routes from angular library.
 
     current solution is to import to the `projects` folder instead of the `dist` folder.
 

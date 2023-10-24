@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 import { View2RoutingModule } from './view2-routing.module';
 import { NavModule } from 'src/app/app3/nav/nav.module';
 import { View2Component } from './view2.component';
-// import { MyAppUIModule } from 'src/app/my-app-ui/my-app-ui.module';
-import { MyAppButtonModule } from 'src/app/my-app-ui/my-app-button/my-app-button.module';
-import { MyAppCheckboxModule } from 'src/app/my-app-ui/my-app-checkbox/my-app-checkbox.module';
+
+import { MyAppButtonModule } from '@@myAppUI';
+import { MyAppCheckboxModule } from '@@myAppUI';
 
 
 @NgModule({
