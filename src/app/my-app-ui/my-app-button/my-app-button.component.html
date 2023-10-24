@@ -1,0 +1,12 @@
+<button 
+    class="btn" 
+    [ngClass]="{
+        'default': selector === MY_APP_BUTTON_SELECTOR.DEFAULT, 
+        'danger': selector === MY_APP_BUTTON_SELECTOR.DANGER,
+        'warning': selector === MY_APP_BUTTON_SELECTOR.WARNING,
+        'info': selector === MY_APP_BUTTON_SELECTOR.INFO,
+        'success': selector === MY_APP_BUTTON_SELECTOR.SUCCESS
+    }"
+>
+    <ng-content></ng-content>
+</button>
