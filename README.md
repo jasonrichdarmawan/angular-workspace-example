@@ -2,12 +2,14 @@
 
 - [ ] lazy loaded NgModules from angular library
 
+    NOTICE: Do not use `@@my-app-ui` to import, for now.
+
 <s>
 - [ ] lazy loaded routes from angular library.
 
     current solution is to import to the `projects` folder instead of the `dist` folder.
 
-    NOTICE: Do not use the `app1-lib` or `app2-lib` projects, for now.
+    NOTICE: Do not use the `@@app1` or `@@app2` to import, for now.
 
     Reference: https://stackoverflow.com/questions/69257652/build-error-while-doing-lazy-loading-of-modules
 
@@ -23,7 +25,7 @@
     npx ng build environments --configuration=production
     ```
 
-    NOTICE: Do not use the `environments`, `app1-lib`, `app2-lib` projects, for now.
+    NOTICE: Do not use the `@@environments`, `@@app1`, `@@app2` to import, for now.
 </s>
 
 # How to run the project
