@@ -14,6 +14,8 @@ import { NavModule } from 'src/app/app4/nav/nav.module';
     CommonModule,
     View2RoutingModule,
     NavModule,
+  ],
+  providers: [
   ]
 })
 export class View2Module { }

@@ -5,7 +5,6 @@ import { View1RoutingModule } from './view1-routing.module';
 import { NavModule } from 'src/app/app4/nav/nav.module';
 import { View1Component } from './view1.component';
 
-
 @NgModule({
   declarations: [
     View1Component,
@@ -14,6 +13,8 @@ import { View1Component } from './view1.component';
     CommonModule,
     View1RoutingModule,
     NavModule,
-  ]
+  ],
+  providers: [
+  ],
 })
 export class View1Module { }
