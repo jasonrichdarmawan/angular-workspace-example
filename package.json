@@ -2,17 +2,29 @@
   "name": "my-app",
   "version": "0.0.0",
   "scripts": {
+    "start": "npm-run-all clean --parallel myAppUI:watch my-app:start-waiton",
+    "build": "run-s myAppUI:build my-app:build",
+    "test": "run-p myAppUI:test my-app:test",
+
+    "myAppUI:build": "ng build myAppUI",
+    "myAppUI:watch": "ng build myAppUI --watch --configuration development",
+    "myAppUI:test": "ng test myAppUI",
+
+    "my-app:start-waiton": "wait-on dist/my-app-ui/package.json && npm run my-app:start",
+    "my-app:start": "ng serve my-app",
+    "my-app:build": "ng build my-app",
+    "my-app:watch": "ng build my-app --watch --configuration development",
+    "my-app:test": "ng test my-app",
+
+    "clean": "rimraf dist",
+
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
 
     "dev:ssr": "ng run my-app:serve-ssr",
     "serve:ssr": "node dist/my-app/server/main.js",
     "build:ssr": "ng build && ng run my-app:server",
     "prerender": "ng run my-app:prerender --no-guess-routes --routes-file routes.txt",
-
     "dev:ssr:app2": "ng run app2:serve-ssr",
     "serve:ssr:app2": "node dist/app2/server/main.js",
     "build:ssr:app2": "ng build app2 && ng run app2:server",
@@ -51,6 +63,9 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "ng-packagr": "^13.0.0",
-    "typescript": "~4.6.2"
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^5.0.5",
+    "typescript": "~4.6.2",
+    "wait-on": "^7.0.1"
   }
 }
