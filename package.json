@@ -4,7 +4,7 @@
   "scripts": {
     "start": "npm-run-all clean --parallel myAppUI:watch my-app:start-waiton",
     "build": "run-s myAppUI:build my-app:build",
-    "test": "run-p myAppUI:test my-app:test",
+    "test": "run-p myAppUI:test app1:test app2:test my-app:test",
 
     "myAppUI:build": "ng build myAppUI",
     "myAppUI:watch": "ng build myAppUI --watch --configuration development",
@@ -15,6 +15,9 @@
     "my-app:build": "ng build my-app",
     "my-app:watch": "ng build my-app --watch --configuration development",
     "my-app:test": "ng test my-app",
+
+    "app1:test": "ng test app1",
+    "app2:test": "ng test app2",
 
     "clean": "rimraf dist",
 
