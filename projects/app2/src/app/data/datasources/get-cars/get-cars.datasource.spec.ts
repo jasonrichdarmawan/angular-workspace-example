@@ -6,11 +6,9 @@ describe('GetCarsDataSource', () => {
   let service: GetCarsDataSource;
 
   beforeEach(() => {
-    const mockGetCarsDataSource = jasmine.createSpyObj(GET_CARS_DATA_SOURCE, [ 'fetchCars' ]);
-
     TestBed.configureTestingModule({
       providers: [
-        { provide: GET_CARS_DATA_SOURCE, useValue: mockGetCarsDataSource },
+        { provide: GET_CARS_DATA_SOURCE, useValue: GetCarsDataSourceImpl },
       ],
     });
     service = TestBed.inject(GET_CARS_DATA_SOURCE);
