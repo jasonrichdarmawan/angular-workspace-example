@@ -1,3 +1,25 @@
+# Purpose of each app
+
+- `/app1`: 
+    - `/app1/view1`: proof of concept on how to use function wisely.
+        - do not call function in HTML to get the data. call the function in constructor.
+        - other alternative is to use the pipe.
+
+- `/app2`: proof of concept on why Prerendering and/or Incremental Static Regeneration is important.
+    - `/app2/view1`:
+        - in Client Side Rendering, you will see `Car 1`, `Car 2`, `Car 3` in sequence.
+        - in Server Side Rendering, you will see `Car 1`, `Car 2`, `Car 3` in one go after 3 seconds of loading.
+    - `/app2/view2`: HTML rendered in server without delay.
+
+- `/app3`: proof of concept compiled angular library with tree-shakable feature.
+    - `/app3/view1`: the browser only download `<app-my-app-button>`. check the `common.js` for proof.
+    - `/app3/view2`:
+        - if you visit `/app3/view2` by clicking the navigation menu, the browser will only download `<app-my-app-checkbox>`
+        - if you visit `/app3/view2` from the address bar, the browser will download `<app-my-app-button>` and `<app-my-app-checkbox>`.
+            - since `<app-my-app-button>` is used by `/app3/view1` and `/app3/view2`, it will be downloaded in `common.js` while `<app-my-app-checkbox>` will be downloaded when you visit `/app3/view2`.
+
+- `/app4`: proof of concept shared state between page `/app4/view1` and `/app4/view2`.
+
 # To Do
 
 - [ ] lazy loaded NgModules from angular library
