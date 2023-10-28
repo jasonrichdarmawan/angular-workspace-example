@@ -5,8 +5,8 @@ import { View2RoutingModule } from './view2-routing.module';
 import { NavModule } from 'src/app/app3/nav/nav.module';
 import { View2Component } from './view2.component';
 
-import { MyAppButtonModule } from 'projects/my-app-ui/src/lib/my-app-button/my-app-button.module';
-import { MyAppCheckboxModule } from 'projects/my-app-ui/src/lib/my-app-checkbox/my-app-checkbox.module';
+import { MyAppButtonModule } from '@@myAppUI/my-app-button';
+import { MyAppCheckboxModule } from '@@myAppUI/my-app-checkbox';
 
 
 @NgModule({

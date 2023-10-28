@@ -12,8 +12,11 @@
       "@@app2": [
         "dist/app2-lib",
       ],
+      "@@myAppUI/*": [
+        "projects/my-app-ui/*"
+      ],
       "@@myAppUI": [
-        "dist/my-app-ui"
+        "projects/my-app-ui"
       ],
     },
     "baseUrl": "./",

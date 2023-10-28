@@ -70,6 +70,8 @@ https://medium.com/disney-streaming/combining-multiple-angular-applications-into
 
 https://levelup.gitconnected.com/a-beginners-guide-to-implementing-transferstate-in-angular-a313f3244f03
 
+https://sandroroth.com/blog/angular-library
+
 # MyApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
