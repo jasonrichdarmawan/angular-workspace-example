@@ -40,6 +40,10 @@ const routes: Routes = [
   ...app2Routes,
 
   { path: 'app3', loadChildren: () => import("./app3/app3.module").then(m => m.App3Module) },
+  {
+    path: 'app4',
+    loadChildren: () => import("./app4/app4.module").then(m => m.App4Module),
+  },
 
   { path: '**', redirectTo: '/app1/one' },
 ];
