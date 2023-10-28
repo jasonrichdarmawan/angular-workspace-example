@@ -1,8 +1,8 @@
 import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NavRoutingModule } from './nav-routing.module';
 import { NavComponent } from './nav.component';
+import { RouterModule } from '@angular/router';
 
 const providers: Provider[] = [
 ];
@@ -13,7 +13,7 @@ const providers: Provider[] = [
   ],
   imports: [
     CommonModule,
-    NavRoutingModule,
+    RouterModule,
   ],
   exports: [
     NavComponent,
