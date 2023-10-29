@@ -1,3 +1,36 @@
+# Summary
+
+- Angular application MUST not be imported as a compiled angular library.
+    1. 1st attempt: `public-api.ts` export `routes` of the compiled angular library.
+    
+       When a visit `/app1`, it will dwonload `/app1/view1` and `/app1/view2` modules, including the module's dependencies.
+
+    2. 2nd attempt: `public-api.ts` export `View1Module` and `View2Module`.
+
+       Same result. The problem is the main entry point.
+
+    3. The next logical strategy is to create multiple entry points. one for `View1Module` and also for `View2Module`
+
+       When you compile `View2Module`, you will get this error because `View2Module` import the source code of `NavModule` instead of the compiled angular library of `NavModule`.
+
+       Yes, you read that right, since we chose the multiple entry points strategy. The CONSEQUENCE is that for every import that go up one directory, like this `import { NavModule } from '../nav/nav.module'`, must be imported as a compiled angular library, like this `import { NavModule } from 'dist-app1/src/nav/nav.module'`. 
+       
+       Now, try to right click the `NavModule` and select `Go to Definition`, it will lead you to the compiled Angular library instead of the source code. This completely ruined the developer experience. 
+
+       ```
+       ✖ Compiling with Angular sources in Ivy partial compilation mode. [object Object] Compilation failed. Watching for file changes...
+       ```
+
+    - Reference:
+        - https://stackoverflow.com/questions/71015618/angular-12-library-builds-fails-with-error-object-object
+
+- Angular library MUST be divided with multiple entry points.
+
+    1. This is because the tree-shakable feature is disabled for the angular compiled library.
+       Usually, when a user visit `/app3/view1` since it only use `MyAppButtonModule`, the user will not download `MyAppButtonCheckbox` (the tree-shakable feature is enabled).
+        
+       But since we have moved `MyAppButtonModule` and `MyAppButtonCheckbox` as an Angular library, and let say we use the `shared module` pattern for convinience by creating a module named `MyAppUIModule` that export `MyAppButtonModule` and `MyAppButtonCheckbox`, when a user visit `/app3/view1`, it will download both `MyAppButtonModule` and `MyAppButtonCheckbox` (the tree-shakable feature is DISABLED).
+
 # Purpose of each app
 
 - `/app1`: 
@@ -22,9 +55,7 @@
 
 # To Do
 
-- [ ] lazy loaded NgModules from angular library
-
-    NOTICE: Do not use `@@my-app-ui` to import, for now.
+- [x] lazy loaded NgModules from angular library
 
 <s>
 - [ ] lazy loaded routes from angular library.
