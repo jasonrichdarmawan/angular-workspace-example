@@ -3,17 +3,22 @@ import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-bro
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
+import { NavModule } from './nav/nav.module';
+// import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavComponent
+    AppComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
-    BrowserTransferStateModule
+    BrowserTransferStateModule,
+    NavModule,
+
+    // SharedModule,
+  ],
+  exports: [
   ],
   providers: [],
   bootstrap: [AppComponent]

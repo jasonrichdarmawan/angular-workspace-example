@@ -31,6 +31,8 @@
         
        But since we have moved `MyAppButtonModule` and `MyAppButtonCheckbox` as an Angular library, and let say we use the `shared module` pattern for convinience by creating a module named `MyAppUIModule` that export `MyAppButtonModule` and `MyAppButtonCheckbox`, when a user visit `/app3/view1`, it will download both `MyAppButtonModule` and `MyAppButtonCheckbox` (the tree-shakable feature is DISABLED).
 
+- Do not use SharedModule or anything similar. Just import the necessary NgModule directly.
+
 # Purpose of each app
 
 - `/app1`: 

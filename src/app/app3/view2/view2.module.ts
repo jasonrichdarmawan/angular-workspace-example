@@ -7,6 +7,7 @@ import { View2Component } from './view2.component';
 
 import { MyAppButtonModule } from '@@myAppUI/my-app-button';
 import { MyAppCheckboxModule } from '@@myAppUI/my-app-checkbox';
+// import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -27,8 +28,11 @@ import { MyAppCheckboxModule } from '@@myAppUI/my-app-checkbox';
      * when a user visit /app3/view2 then navigate to /app3/view1, it will import MyAppButtonModule again.
      */
     // MyAppUIModule,
+
     MyAppButtonModule,
     MyAppCheckboxModule,
+
+    // SharedModule,
   ],
 })
 export class View2Module { }
