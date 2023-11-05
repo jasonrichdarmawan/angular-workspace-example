@@ -3,20 +3,11 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@@environments": [
-        "dist/environments"
+      "@mycomp/ui/*": [
+        "projects/mycomp/ui/*"
       ],
-      "@@app1": [
-        "dist/app1-lib",
-      ],
-      "@@app2": [
-        "dist/app2-lib",
-      ],
-      "@@myAppUI/*": [
-        "projects/my-app-ui/*"
-      ],
-      "@@myAppUI": [
-        "projects/my-app-ui"
+      "@mycomp/ui": [
+        "projects/mycomp/ui"
       ],
     },
     "baseUrl": "./",

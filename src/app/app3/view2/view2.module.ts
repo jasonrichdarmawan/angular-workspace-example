@@ -5,8 +5,8 @@ import { View2RoutingModule } from './view2-routing.module';
 import { NavModule } from 'src/app/app3/nav/nav.module';
 import { View2Component } from './view2.component';
 
-import { MyAppButtonModule } from '@@myAppUI/my-app-button';
-import { MyAppCheckboxModule } from '@@myAppUI/my-app-checkbox';
+import { MyAppButtonModule } from '@mycomp/ui/my-app-button';
+import { MyAppCheckboxModule } from '@mycomp/ui/my-app-checkbox';
 // import { SharedModule } from 'src/app/shared/shared.module';
 
 

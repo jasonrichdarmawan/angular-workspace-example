@@ -2,4 +2,4 @@
  * Public API Surface of my-app-ui
  */
 
-export const myAppUI = "@@myAppUI";
+export const mycompUi = "@mycomp/ui";

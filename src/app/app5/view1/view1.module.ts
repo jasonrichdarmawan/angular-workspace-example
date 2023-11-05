@@ -3,22 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { View1RoutingModule } from './view1-routing.module';
 import { View1Component } from './view1.component';
-import { NavModule } from 'src/app/app3/nav/nav.module';
-import { MyAppButtonModule } from '@mycomp/ui/my-app-button';
-// import { SharedModule } from 'src/app/shared/shared.module';
+import { NavModule } from '../nav/nav.module';
+import { MyAppStepperModule } from '@mycomp/ui/my-app-stepper';
 
 
 @NgModule({
   declarations: [
-    View1Component,
+    View1Component
   ],
   imports: [
     CommonModule,
     View1RoutingModule,
     NavModule,
-
-    MyAppButtonModule,
-    // SharedModule,
+    MyAppStepperModule,
   ]
 })
 export class View1Module { }

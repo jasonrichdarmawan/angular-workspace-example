@@ -5,11 +5,11 @@
     "outDir": "./out-tsc/app",
     "types": [],
     "paths": {
-      "@@myAppUI/*": [
-        "dist/my-app-ui/*"
+      "@mycomp/ui/*": [
+        "dist/mycomp/ui/*"
       ],
-      "@@myAppUI": [
-        "dist/my-app-ui"
+      "@mycomp/ui": [
+        "dist/mycomp/ui"
       ]
     }
   },
