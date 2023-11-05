@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-app-stepper.component.css']
 })
 export class MyAppStepperComponent implements OnInit {
+  count: number;
 
-  constructor() { }
+  constructor() {
+    this.count = 0;
+  }
 
   ngOnInit(): void {
   }
 
+  increment() {
+    this.count += 1;
+  }
+
+  decrement() {
+    this.count -= 1;
+  }
 }

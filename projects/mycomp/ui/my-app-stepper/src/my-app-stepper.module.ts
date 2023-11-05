@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MyAppStepperComponent } from './my-app-stepper.component';
+import { MyAppButtonModule } from '@mycomp/ui/my-app-button';
 
 
 
@@ -10,6 +11,7 @@ import { MyAppStepperComponent } from './my-app-stepper.component';
   ],
   imports: [
     CommonModule,
+    MyAppButtonModule
   ],
   exports: [
     MyAppStepperComponent,

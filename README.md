@@ -1,5 +1,9 @@
 # Summary
 
+- We must migrate the smallest ui component first because library can't import non library.
+
+    i.e. migrating `my-app-profile` which import `my-app-image`. we need to migrate `my-app-image` first before migrating `my-app-profile`
+
 - Angular application MUST not be imported as a compiled angular library.
     1. 1st attempt: `public-api.ts` export `routes` of the compiled angular library.
     

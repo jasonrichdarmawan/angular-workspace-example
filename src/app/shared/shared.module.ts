@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { MyAppButtonModule } from '@@myAppUI/my-app-button';
-import { MyAppCheckboxModule } from '@@myAppUI/my-app-checkbox';
+import { MyAppButtonModule } from '@mycomp/ui/my-app-button';
+import { MyAppCheckboxModule } from '@mycomp/ui/my-app-checkbox';
 
 
 /**
