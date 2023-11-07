@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { COUNT_DATA_SOURCE, CountDataSource } from '../../datasources/count/count.local.datasource.impl';
-import { CountRepository } from 'src/app/app4/domain/repositories/count.repository';
+import { CountRepository } from '../../../domain/repositories/count.repository';
 
 @Injectable()
 export class CountRepositoryImpl implements CountRepository {

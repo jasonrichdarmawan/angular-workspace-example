@@ -10,6 +10,12 @@
       ],
       "@mycomp/ui": [
         "dist/mycomp/ui"
+      ],
+      "@mycomp/service/*": [
+        "dist/mycomp/service/*"
+      ],
+      "@mycomp/service": [
+        "dist/mycomp/service"
       ]
     }
   },

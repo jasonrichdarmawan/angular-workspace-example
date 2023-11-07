@@ -9,6 +9,12 @@
       "@mycomp/ui": [
         "projects/mycomp/ui"
       ],
+      "@mycomp/service/*": [
+        "projects/mycomp/service/*"
+      ],
+      "@mycomp/service": [
+        "projects/mycomp/service"
+      ]
     },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",

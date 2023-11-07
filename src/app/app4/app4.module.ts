@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { App4RoutingModule } from './app4-routing.module';
-import { COUNT, COUNT_DATA_SOURCE, CountLocalDataSource } from './data/datasources/count/count.local.datasource.impl';
-import { COUNT_REPOSITORY } from './domain/repositories/count.repository';
-import { GET_COUNT, GetCountImpl } from './domain/usecases/get-count/get-count.usecase';
-import { SET_COUNT, SetCountImpl } from './domain/usecases/set-count/set-count.usecase';
-import { CountRepositoryImpl } from './data/repositories/count/count.repository.impl';
+import { COUNT, COUNT_DATA_SOURCE, CountLocalDataSource } from '@mycomp/service/count';
+import { COUNT_REPOSITORY } from '@mycomp/service/count';
+import { GET_COUNT, GetCountImpl } from '@mycomp/service/count';
+import { SET_COUNT, SetCountImpl } from '@mycomp/service/count';
+import { CountRepositoryImpl } from '@mycomp/service/count';
 
 
 @NgModule({
